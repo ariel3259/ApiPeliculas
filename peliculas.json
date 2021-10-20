@@ -1,0 +1,82 @@
+[
+	{
+	  "nombre": "pelicula generica 1",
+	  "codigo":"#af45k",
+	  "anioEstreno":"2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 50
+	},
+	{
+	  "nombre": "pelicula generica 2",
+	  "codigo":"#65fdr",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 27
+	},
+	{
+	  "nombre": "pelicula generica 3",
+	  "codigo": "#445fga",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 78
+	},
+	{
+	  "nombre": "pelicula generica 4",
+	  "codigo":"#sfd2k",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 87
+},
+	{
+	  "nombre": "pelicula generica 5",
+	  "codigo":"#4rthj",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 76
+	},
+	{
+	  "nombre": "pelicula generica 6",
+	  "codigo":"#ghc12",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 120
+	},
+	{
+	  "nombre": "pelicula generica 7",
+	  "codigo":"#dfqwq",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 555
+	},
+	{
+	  "nombre": "pelicula generica 8",
+	  "codigo":"#atcv2",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 25
+	},
+	{
+	  "nombre": "pelicula generica 9",
+	  "codigo":"#qouws3",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 10
+	},
+	{
+	  "nombre": "pelicula generica 10",
+	  "codigo":"#s12dx",
+	  "anioEstreno": "2019",
+	  "genero": "accion",
+	  "director": "director generico",
+	  "espectadores": 120
+	}
+  ]
