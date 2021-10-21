@@ -30,7 +30,7 @@ app.get("/",(req,res)=>{
 //ingresar peliculas
 app.post("/api/peliculas",(req,res)=>{
 	//campos de intermedio que son usados para agregar peliculas
-	let nombre,codigoPelicula,anioEstreno,genero,director,espectadores
+	let nombre,codigo,anioEstreno,genero,director,espectadores
 
 	peliculas.nombre=req.body.nombre
 	peliculas.codigo=req.body.codigo
@@ -40,13 +40,13 @@ app.post("/api/peliculas",(req,res)=>{
 	peliculas.espectadores=req.body.espectadores
 
 	nombre=peliculas.nombre
-	codigoPelicula=peliculas.codigo
+	codigo=peliculas.codigo
 	anioEstreno=peliculas.anioEstreno
 	genero=peliculas.genero
 	director=peliculas.director
 	espectadores=peliculas.espectadores
 
-	arregloPeliculas.push({nombre,codigoPelicula,anioEstreno,genero,director,espectadores})
+	arregloPeliculas.push({nombre,codigo,anioEstreno,genero,director,espectadores})
 	res.send("Pelicula agregada")
 })
 
@@ -59,15 +59,16 @@ app.get("/api/peliculas",(req,res)=>{
 
 //mostrar peliculas con mayor cantidad de espectadores
 app.get("/api/espectadores",(req,res)=>{
-	//se ordena las películas desde la pelicula con menor cantidad de espectadores hasta la pelicula con mayor cantida de espectadores,y se invierte 
-	const mayorRating=arregloPeliculas.sort((a,b)=>a.espectadores-b.espectadores).reverse()
+	//se ordena las películas desde la pelicula con mayor cantidad de espectadores hasta la pelicula con menor cantida de espectadores
+	const mayorRating=arregloPeliculas.sort((a,b)=>b.espectadores-a.espectadores)
 	console.log(mayorRating)
 	res.send(mayorRating)
 })
 
 //mostrar una pelicula determinada por su código
-app.get("/api/obtenerUnaPelicula/:codigoPelicula",(req,res)=>{
+app.get("/api/obtenerUnaPelicula/:codigo",(req,res)=>{
 	const codigoPelicula=req.params.codigo
+
 	res.send(arregloPeliculas.find(element=>element.codigo===codigoPelicula))
 })
 
