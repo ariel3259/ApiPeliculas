@@ -1,75 +1,51 @@
-const express=require("express")
-const app=express()
-const cors=require("cors")
+const express = require("express")
+const app = express()
+const cors = require("cors")
 
 app.use(express.json())
 app.use(cors())
 
-//objeto peliculas
-const peliculas={
-	nombre:"",
-	codigo:"",
-	anioEstreno:"",
-	genero:"",
-	director:"",
-	espectadores:0
-}
-
-//arreglo de peliculas
-const arregloPeliculas=[]
-
-
-
-
-
+//movies array
+const moviesArr=[]
 
 app.get("/",(req,res)=>{
 	res.send("Hi word")
 })
 
-//ingresar peliculas
-app.post("/api/peliculas",(req,res)=>{
-	//campos de intermedio que son usados para agregar peliculas
-	let nombre,codigo,anioEstreno,genero,director,espectadores
-
-	peliculas.nombre=req.body.nombre
-	peliculas.codigo=req.body.codigo
-	peliculas.anioEstreno=req.body.anioEstreno
-	peliculas.genero=req.body.genero
-	peliculas.director=req.body.director
-	peliculas.espectadores=req.body.espectadores
-
-	nombre=peliculas.nombre
-	codigo=peliculas.codigo
-	anioEstreno=peliculas.anioEstreno
-	genero=peliculas.genero
-	director=peliculas.director
-	espectadores=peliculas.espectadores
-
-	arregloPeliculas.push({nombre,codigo,anioEstreno,genero,director,espectadores})
-	res.send("Pelicula agregada")
+//add a movies
+app.post("/api/movies",(req,res)=>{
+//movies object saves at moviesArr
+const movies = {
+	name:req.body.name,
+	code:req.body.code,
+	releaseYear:req.body.releaseYear,
+	gender:req.body.gender,
+	director:req.body.director,
+	viewers:req.body.viewers,
+}
+	moviesArr.push(movies)
+	res.send("A movie has been added")
 })
 
-//ver preguntas
-app.get("/api/peliculas",(req,res)=>{
+//get movies
+app.get("/api/movies",(req,res)=>{
 
-	console.log(arregloPeliculas)
-	res.send(arregloPeliculas)
+	console.log(moviesArr)
+	res.send(moviesArr)
 })
 
-//mostrar peliculas con mayor cantidad de espectadores
-app.get("/api/espectadores",(req,res)=>{
-	//se ordena las películas desde la pelicula con mayor cantidad de espectadores hasta la pelicula con menor cantida de espectadores
-	const mayorRating=arregloPeliculas.sort((a,b)=>b.espectadores-a.espectadores)
-	console.log(mayorRating)
-	res.send(mayorRating)
+//get movie ranking by viewers
+app.get("/api/views",(req,res)=>{
+	//movies sorts from has many viewers to has few viewers 
+	const highestRanking=moviesArr.sort((a,b)=>b.viewers-a.viewers)
+	console.log(highestRanking)
+	res.send(highestRanking)
 })
 
-//mostrar una pelicula determinada por su código
-app.get("/api/obtenerUnaPelicula/:codigo",(req,res)=>{
-	const codigoPelicula=req.params.codigo
-
-	res.send(arregloPeliculas.find(element=>element.codigo===codigoPelicula))
+//get a movie by code 
+app.get("/api/getAMovie/:code",(req,res)=>{
+	const movieCode=req.params.code
+	res.send(moviesArr.find(element=>element.code===movieCode))
 })
 
 app.listen("3000",()=>console.log("Server listening at port 3000"))
