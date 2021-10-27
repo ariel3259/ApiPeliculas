@@ -1,0 +1,82 @@
+[
+	{
+	  "name": "pelicula generica 1",
+	  "code":"#af45k",
+	  "releaseYear":"2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 50
+	},
+	{
+	  "name": "pelicula generica 2",
+	  "code":"#65fdr",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 27
+	},
+	{
+	  "name": "pelicula generica 3",
+	  "code": "#445fga",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 78
+	},
+	{
+	  "name": "pelicula generica 4",
+	  "code":"#sfd2k",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 87
+},
+	{
+	  "name": "pelicula generica 5",
+	  "code":"#4rthj",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 76
+	},
+	{
+	  "name": "pelicula generica 6",
+	  "code":"#ghc12",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 120
+	},
+	{
+	  "name": "pelicula generica 7",
+	  "code":"#dfqwq",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 555
+	},
+	{
+	  "name": "pelicula generica 8",
+	  "code":"#atcv2",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 25
+	},
+	{
+	  "name": "pelicula generica 9",
+	  "code":"#qouws3",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 10
+	},
+	{
+	  "name": "pelicula generica 10",
+	  "code":"#s12dx",
+	  "releaseYear": "2019",
+	  "gender": "accion",
+	  "director": "director generico",
+	  "viewers": 120
+	}
+  ]
